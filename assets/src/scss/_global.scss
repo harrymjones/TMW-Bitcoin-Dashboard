@@ -1,0 +1,35 @@
+/**
+ * Global app/site styles
+ */
+body {
+	background-color: $color-bg;
+    margin: 0;
+    overflow: hidden;
+    &.up{
+        animation: fadeToGreen 6s 2s forwards;
+    }
+    &.down{
+        animation: fadeToRed 6s 2s forwards;
+    }
+}
+
+@keyframes fadeToGreen {
+    to {
+        background-color: #398624;
+    }
+}
+
+@keyframes fadeToRed {
+    to {
+        background-color: #9d3232;
+    }
+}
+
+/**
+ * Default layout container
+ */
+.l-container {
+	width: 90%;
+	max-width: $layout-max-width;
+	margin: 0 auto;
+}

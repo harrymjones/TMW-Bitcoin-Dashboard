@@ -1,0 +1,22 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+
+# TMW
+Bitcoin rate conversion dashboard for TMW interview
+
+
+## Developers:
+Harry Jones
+
+
+# TECHNOLOGY COLOPHON
+
+    KICKOFF FRAMEWORK - trykickoff.com
+    HTML
+    CSS
+    Sass
+    Grunt.js
+    BrowserSync
+    NPM
+    Browserify

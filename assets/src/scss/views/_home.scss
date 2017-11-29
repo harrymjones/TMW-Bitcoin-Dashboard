@@ -1,0 +1,64 @@
+.main{
+    height: 100vh;
+    
+    .currency{
+        position: relative;
+        .currency-name{
+            position: absolute;
+            opacity: 0.1;
+            font-size: 6em;
+            font-weight: 600;
+            top: 30%;
+            right: -10%;
+            transform: translate(-50%, -50%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .currency-value{
+            position: relative;
+            z-index: 1;
+            display: block;
+            font-size: 4em;
+            width: 100%;
+            background-color: transparent;
+            border: 0;
+            color: #fff;
+            border-bottom: 3px solid transparent;
+            transition: border-color 0.2s, transform 0.2s;
+            cursor: pointer;
+            &:focus, &:active{
+                border-color: #fff;
+            }
+            &:focus, &:active{
+                outline: none;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+.absolute{
+    position: absolute;
+    max-width: 100%;
+    z-index: 3;
+    opacity: 0.5;
+}
+
+.bottom-left{
+    bottom: 10px;
+    left: 10px;
+}
+
+.top-right{
+    top: 10px;
+    right: 10px;
+}
+
+canvas.chartjs-render-monitor {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    width: 100vw !important;
+    height: 100vh !important;
+}

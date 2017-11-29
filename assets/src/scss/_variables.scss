@@ -1,0 +1,85 @@
+/**
+ * Variables
+ * - Typography
+ * - Breakpoints
+ * - Paths
+ * - Layout & Grid
+ * - App-specific
+ */
+
+// scss-lint:disable SpaceAfterVariableName
+
+/**
+ * Typography
+ *
+ * Base sizes:
+ * Set this in pixels (but do not add px),
+ * the font-size mixin will convert to REMS
+ */
+$font-size-base           : 20;
+$font-size-base-px        : $font-size-base * 1px;
+$font-size-base-narrow    : $font-size-base - 2;
+$font-size-base-narrow-px : $font-size-base-narrow * 1px;
+
+$leading-base             : 1.4;
+$line-height-base         : round($font-size-base * $leading-base); // 20 * 1.4
+$baseline                 : $line-height-base * 1px;
+
+$type-scale               : 1.25; // Major third
+
+$type: (
+	micro                   : modular-scale($font-size-base, -2, $type-scale),
+	small                   : modular-scale($font-size-base, -1, $type-scale), // h5, h6
+	base                    : modular-scale($font-size-base, 0, $type-scale),  // p, h4
+	mid                     : modular-scale($font-size-base, 1, $type-scale),  // h3
+	large                   : modular-scale($font-size-base, 2, $type-scale),  // h2
+	jumbo                   : modular-scale($font-size-base, 3, $type-scale)   // h1
+);
+
+// Useful to set here when bold webfonts come as 400 font-weight.
+$font-weight-bold         : bold;
+
+// Font stacks
+$font-family-sans         : "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif        : Georgia, "Times New Roman", Times, serif;
+$font-family-mono         : Menlo, Monaco, "Courier New", monospace;
+
+$font-family-base         : $font-family-sans;
+$font-family-alt          : $font-family-serif;
+
+$font-family-headings     : $font-family-base; // using inherit will use $font-family-base for all headings
+$font-weight-headings     : bold;    // instead of browser default, bold
+$line-height-headings     : 1.1;
+
+
+/**
+ * Breakpoints
+ * There are no common breakpoints so these are just a suggestions
+ * You'll need to define your own breakpoints to suit your design
+ * Add your breakpoints to this Sass map
+ * Used in the Kickoff grid
+ */
+$breakpoints: (
+	narrow                  : 400px,
+	mid                     : 750px,
+	wide                    : 1000px,
+	huge                    : 1250px
+);
+
+// Special breakpoints - add any more here
+$bp-rwd-text              : mid; // Reduce text size below this width
+
+/**
+ * Path vars
+ */
+$img-path                 : "/assets/dist/img"; // Usage: background: url('#{$img-path}/img.jpg') 0 0 no-repeat;
+
+
+/**
+ * App-specific variables
+ */
+$default-transition-timing   : cubic-bezier(.77, 0, .175, 1);
+$default-transition-duration : 300ms;
+$default-transition          : all $default-transition-duration $default-transition-timing;
+
+// Add your own :)
